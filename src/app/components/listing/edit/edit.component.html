@@ -1,0 +1,28 @@
+<section class="comp-section-01">
+  <div class="c-wrapper">
+    <div class="c-container-01">
+      <h4 class="c-item-01">  {{ header }}</h4>
+      <form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="form-group-01">
+                    <input id="username" type="text" name="username"  autocomplete="new-password" onkeyup="this.setAttribute('value', this.value);" class="gr-textbox" [(ngModel)]="user.username">
+                    <label for="username" class="tb-placeholder-01">
+                        Username
+                    </label>
+                </div>
+                <div class="form-group-01">
+                            <input id="password" type="password" name="password"  autocomplete="new-password" onkeyup="this.setAttribute('value', this.value);" class="gr-textbox" [(ngModel)]="user.pass">
+                            <label for="password" class="tb-placeholder-01">
+                                Password
+                            </label>
+                        </div>
+                        <div class="form-group-01">
+                                    <input id="userRole" type="text" name="userRole"  autocomplete="new-password" onkeyup="this.setAttribute('value', this.value);" class="gr-textbox" [(ngModel)]="user.role">
+                                    <label for="userRole" class="tb-placeholder-01">
+                                        Role
+                                    </label>
+                                </div>
+  <button type="submit" name="button" class="c-item-02">submit</button>
+      </form>
+      </div>
+    </div>
+      </section>

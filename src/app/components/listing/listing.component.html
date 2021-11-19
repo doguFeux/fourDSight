@@ -1,0 +1,50 @@
+<section class="comp-section-01">
+  <div class="c-wrapper">
+    <div class="c-container-01">
+      <h4 class="c-item-01">Listing Page</h4>
+      </div>
+
+      <div class="c-container-02">
+            <a class="c-item-03" [routerLink]="['add',0]">User Create</a>
+
+        <div class="c-item-01">
+          <div class="c-unit-01">
+            Id
+          </div>
+          <div class="c-unit-01">
+            Username
+          </div>
+          <div class="c-unit-01">
+            Password
+          </div>
+          <div class="c-unit-01">
+            Role
+          </div>
+          <div class="c-unit-01">
+            Edit
+          </div>
+          <div class="c-unit-01">
+            Delete
+          </div>
+        </div>
+        <div class="c-item-02" *ngFor="let user of userList">
+          <div class="c-unit-01">
+            {{ user.id }}
+          </div>
+        <div class="c-unit-01">
+          {{ user.username }}
+        </div>
+        <div class="c-unit-01">
+          {{ user.pass }}
+        </div>
+        <div class="c-unit-01">
+          {{ user.role }}
+        </div>
+        <a class="c-unit-01" [routerLink]="['edit',user.id]">Edit</a>
+        <button type="button" (click)="deleteUser(user.id)" class="c-unit-01">
+          Delete
+        </button>
+        </div>
+    </div>
+  </div>
+</section>
